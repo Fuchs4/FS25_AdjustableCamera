@@ -1,12 +1,16 @@
 #!/bin/bash
 ZIPFILE=FS22_AdjustableCamera.zip
+MODDIR=FS22_AdjustableCamera
 if test -f "$ZIPFILE"; then
     echo "Deleting previous $ZIPFILE."
     rm $ZIPFILE
 fi
 
 echo "Creating new $ZIPFILE."
-zip $ZIPFILE modDesc.xml icon.dds *.lua > /dev/null
+(
+    cd "$MODDIR" || exit
+    zip ../$ZIPFILE ./* > /dev/null
+)
 
 if unzip -t "$ZIPFILE" > /dev/null; then
     echo "Zip file integrity check successful."
