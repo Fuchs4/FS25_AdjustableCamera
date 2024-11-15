@@ -1,6 +1,6 @@
 #!/bin/bash
-ZIPFILE=FS22_AdjustableCamera.zip
-MODDIR=FS22_AdjustableCamera
+ZIPFILE=FS25_AdjustableCamera.zip
+MODDIR=FS25_AdjustableCamera
 if test -f "$ZIPFILE"; then
     echo "Deleting previous $ZIPFILE."
     rm $ZIPFILE
